@@ -28,9 +28,39 @@ Copy `.env.example` to `.env` and include the appropriate keys for your chosen L
 - `LLM_SERVICE`: `openai` or `azure` (running Azure OpenAI)
 - `IMAGE_GEN_SERVICE`: `openai` or `azure` (running Azure OpenAI)
 
+
+# TTS (Text-to-Speech) service configuration
+TTS_SERVICE=google
+GOOGLE_TTS_API_KEY=your_google_tts_api_key
+
+# LLM (Large Language Model) service configuration
+LLM_SERVICE=openai
+OPENAI_API_KEY=your_openai_api_key
+
+# Image generation service configuration
+IMAGE_GEN_SERVICE=openai
+OPENAI_IMAGE_API_KEY=your_openai_image_api_key
+
+
 Depending on which service you're using, you'll need to set other variables in your .env file. The env.example file should point you in the right direction.
 
 If you're using Azure, you can find the values from your [Azure Dashboard](https://portal.azure.com/) in the **Keys and Endpoints** tab for your chosen AI service.
+
+# TTS (Text-to-Speech) service configuration
+TTS_SERVICE=azure
+AZURE_TTS_ENDPOINT=your_azure_tts_endpoint
+AZURE_TTS_API_KEY=your_azure_tts_api_key
+
+# LLM (Large Language Model) service configuration
+LLM_SERVICE=azure
+AZURE_LLM_ENDPOINT=your_azure_llm_endpoint
+AZURE_LLM_API_KEY=your_azure_llm_api_key
+
+# Image generation service configuration
+IMAGE_GEN_SERVICE=azure
+AZURE_IMAGE_GEN_ENDPOINT=your_azure_image_gen_endpoint
+AZURE_IMAGE_GEN_API_KEY=your_azure_image_gen_api_key
+
 
 > ❗️Note that the Azure OpenAI keys are _not_ the same ones you'd get from [platform.openai.com](https://platform.openai.com). The keyword arguments for the completion endpoints may also be slightly different than you're used to. For more detail, check out [How to switch between OpenAI and Azure OpenAI endpoints with Python](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/switching-endpoints).
 
